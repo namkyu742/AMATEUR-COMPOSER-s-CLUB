@@ -1,0 +1,284 @@
+body{
+    background-color: whitesmoke;
+}
+
+footer {
+    color: #585858;
+    text-align: center;
+    text-decoration: none;
+}
+
+#footer_link{
+    color: #585858;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    background-color: #6A0888;
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 6px 30px;
+
+    margin-left: 10px;
+    float: right;
+}
+
+nav li a:hover {
+    background-color: #8904B1;
+}
+
+.title_image{
+    width: 600px;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.title_line{
+    width: 600px;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.music_player {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+
+}
+
+.player {
+    display: block;
+    width: 760px;
+    background-color: yellow;
+}
+
+.board {
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img_frame {
+    background-color: white;
+    overflow: auto;
+    border: 2px solid gray;
+    margin-top: 10px;
+}
+
+.user_image {
+    width: 250px;
+    margin: 10px;
+    float: left;
+    box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.4);
+}
+
+.post_update ,.post_delete{
+    width: 80px;
+    height: 30px;
+    font-family: '나눔고딕';
+    font-weight: bold;
+    background-color: #6A0888;
+    color: white;
+    border: 0;
+    cursor:pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+
+}
+
+.post_title {
+    color: black;
+    word-break: break-all;
+    padding: 5px 5px 5px 5px;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+    font-family: '나눔고딕';
+    font-size: xx-large;
+    float: left;
+}
+
+.post_content {
+    color: black;
+    /* background-color: white;
+    border: 1px solid black; */
+    word-break: break-all;
+    /* margin-top: 10px;
+    margin-bottom: 10px;
+
+    width:760px; */
+    padding: 5px 5px 5px 5px;
+
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+
+    font-family: '나눔고딕';
+    font-size: medium;
+    
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.user_thumbnail {
+    width: 21px;
+    float: left;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.user_nickname {
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.user_date {
+    float: right;
+    padding-left: 10px;
+    margin-right: 10px;
+    font-size: small;
+}
+
+.user_info {
+    background-color: #6A0888;
+    clear: left;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+}
+.user_reply {
+    margin-left: 50px;
+    word-break: break-all;
+}
+
+.reply {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+
+.comment_text {
+    resize: none;
+    float:left;
+    width: 680px;
+    height:40px;
+    margin-top: 10px;
+}
+
+.comment_submit {
+    width: 100px;
+    height: 45px;
+    font-family: '나눔고딕';
+    font-weight: bold;
+    background-color: #6A0888;
+    color: white;
+    border: 0;
+    cursor:pointer;
+    margin-top: 10px;
+    float: right;
+}
+
+button:hover{
+    background-color: #8904B1;
+} 
+
+
+#post_insert{
+    background-color: #6A0888;
+    color:white;
+    text-align: center;
+    padding: 6px;
+    margin-bottom: 10px;
+    font-family: "나눔고딕";
+    font-weight: bold;
+}
+
+/* #post_insert:hover, #write_reply:hover{
+    background-color: #8904B1;
+    color:white;
+}
+
+
+#post_insert a , #write_reply a{
+    color:white;
+    text-decoration: none;
+}
+
+#write_reply{
+    background-color: gray;
+    color:white;
+    text-align: center;
+    padding: 6px;
+    font-family: "나눔고딕";
+    font-weight: bold;
+} */
+
+#list_toggle{
+    font-family: "나눔고딕";
+    font-size: small;
+    text-align: right;
+    margin: 10px 10px 10px 10px;
+}
+
+.main_user_name{
+    background-color: white;
+    border: 2px solid gray;
+    font-family: "나눔고딕";
+    padding: 6px 30px;
+    float: left;
+}
+
+.sub_news,.sub_news th,.sub_news td{border:0}
+.sub_news a{color:#383838;text-decoration:none}
+.sub_news{width:100%;border-bottom:1px solid #999;color:#666;font-size:12px;table-layout:fixed}
+.sub_news caption{display:none}
+.sub_news th{padding:5px 0 6px;border-top:solid 1px #999;border-bottom:solid 1px #b2b2b2;background-color:#f1f1f4;color:#333;font-weight:bold;line-height:20px;vertical-align:top}
+.sub_news td{padding:8px 0 9px;border-bottom:solid 1px #d2d2d2;text-align:center;line-height:18px;}
+.sub_news .date,.sub_news .hit{padding:0;font-family:Tahoma;font-size:11px;line-height:normal}
+.sub_news .title{text-align:left; padding-left:15px; font-size:13px;}
+.sub_news .title .pic,.sub_news .title .new{margin:0 0 2px;vertical-align:middle}
+.sub_news .title a.comment{padding:0;background:none;color:#f00;font-size:12px;font-weight:bold}
+.sub_news tr.reply .title a{padding-left:16px;background:url(첨부파일/ic_reply.png) 0 1px no-repeat}
+
+
+.post_search{
+    text-align: center;
+}
+
+.search_input{
+    height:20px;
+}
+.search_submit{
+    background-color: #6A0888;
+    color:white;
+    text-align: center;
+    /* padding: 6px;
+    margin-bottom: 10px; */
+    font-family: "나눔고딕";
+    height: 25px;
+}
+
+.post_updates{
+    width: 20px;
+    height: 20px;
+    float: right;
+}

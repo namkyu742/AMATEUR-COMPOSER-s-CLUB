@@ -1,0 +1,52 @@
+set foreign_key_checks = 0;
+drop database mydb;
+create database mydb default character set utf8 collate utf8_general_ci;
+use mydb;
+set names euckr;
+SET GLOBAL max_allowed_packet=16777215;
+
+-- drop table user;
+create table user (
+    id int(11) not null auto_increment,
+    email varchar(50) not null,
+    nickname varchar(50) not null,
+    password varchar(40) not null,
+    image mediumblob,
+    primary key(id),
+    index(email)
+) ENGINE=InnoDB default character set utf8 collate utf8_general_ci;
+
+-- drop table post;
+create table post (
+    postid int(11) not null auto_increment,
+    userid int(11) not null,
+    time timestamp default current_timestamp,
+    music mediumblob,
+    title text NOT null,
+    content text NOT null,
+    views int(10) not null,
+    primary key(postid),
+    foreign key(userid) references user(id) on delete cascade on update cascade,
+    index(time)
+) ENGINE=InnoDB default character set utf8 collate utf8_general_ci;
+
+-- drop table reply;
+CREATE TABLE reply (
+    replyid INT(11) NOT NULL AUTO_INCREMENT,
+    postid INT(11) NOT NULL,
+    userid INT(11) NOT NULL,
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    content TEXT NOT NULL,
+    PRIMARY KEY (replyid),
+    FOREIGN KEY (postid) REFERENCES review(reviewid) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (userid) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    INDEX (postid),
+    INDEX (time)
+) ENGINE=InnoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+set foreign_key_checks = 1;
+
+
+describe user;
+describe post;
+describe reply;

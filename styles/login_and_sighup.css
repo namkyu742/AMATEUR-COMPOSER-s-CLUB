@@ -1,0 +1,113 @@
+body {
+    background-color: whitesmoke;
+}
+
+form {
+
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title_image {
+    width: 400px;
+    display: block;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title_line {
+    width: 400px;
+    display: block;
+    /* padding-top: 40px; */
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-family: '나눔고딕';
+    font-weight: bold;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+}
+
+button {
+    width: 407px;
+    height: 40px;
+    font-family: '나눔고딕';
+    font-weight: bold;
+    background-color: #6A0888;
+    color: white;
+    border: 0;
+    cursor:pointer;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #8904B1;
+}
+
+a {
+    color: #585858;
+    text-decoration: none;
+    font-size: small;
+}
+
+.link_go{
+    text-align: center;
+}
+
+.inform_UnimplementedPage{
+    text-align: center;
+}
+
+textarea {
+    width: 400px;
+}
+
+.filebox label { 
+    display: inline-block; 
+    padding: .5em .75em; 
+    color: #585858; 
+    font-size: inherit; 
+    line-height: normal; 
+    vertical-align: middle; 
+    background-color: #fdfdfd; 
+    cursor: pointer; 
+    border: 1px solid #ebebeb; 
+    border-bottom-color: #e2e2e2; 
+    border-radius: .25em; 
+} 
+.filebox label:hover { 
+    color: #fdfdfd; 
+    background-color: #8904B1;
+}
+.filebox input[type="file"] { /* 파일 필드 숨기기 */ 
+    position: absolute; 
+    width: 1px; height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip:rect(0,0,0,0); 
+    border: 0; 
+}
+
+.find_id_form{
+    background-color: white;
+    width: 450px;
+    border: 2px solid gray;
+    margin: 0 auto;
+}
+
+.find_pw_form{
+    background-color: white;
+    width: 450px;
+    border: 2px solid gray;
+    margin: 0 auto;
+}

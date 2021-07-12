@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>로그인</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/login_and_sighup.css?ver=2.0sasa" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="scripts/main_javascript.js?ver=2.1adss"></script>
+</head>
+
+<body>
+    <a href="main_page.php"><img class="title_image" src="images/title_image2.png" alt="title_image" /></a>
+    <img class="title_line" src="images/title_line.png" alt="title_image" />
+
+    <form method="POST" action="login.php">
+        <br />
+        <input type="text" name="email" placeholder=" 아이디" /><br />
+        <br />
+        <input type="password" name="pass" placeholder=" 비밀번호" /><br />
+        <br />
+        <button class="submit" type="submit">로그인</button>
+        <hr />
+        <section class="link_go">
+            <!-- <a href="find_form.php">아이디 찾기</a> -->
+            <a id="find_id">아이디 찾기</a>
+            <a> | </a>
+            <a id="find_pw">비밀번호 찾기</a>
+            <a> | </a>
+            <a href="signup.html">회원가입</a>
+        </section>
+    </form>
+    <br />
+    <div class="find_id_form">
+        <form method="post" action="find_id.php">
+            <p>아이디 찾기</p>
+            <input type="text" size="50" name="name" placeholder=" 이름"><br />
+            <br />
+            <input type="text" size="50" name="phone_number" placeholder=" 전화번호"><br />
+            <button class="submit" type="submit">아이디 찾기</button>
+            <br /><br />
+        </form>
+    </div>
+    <br />
+    <div class="find_pw_form">
+        <form method="post" action="find_pw.php">
+            <p>비밀번호 찾기</p>
+            <input type="text" size="35" name="userid" placeholder=" 아이디"><br />
+            <br />
+            <input type="text" size="50" name="name" placeholder=" 이름"><br />
+            <br />
+            <input type="text" size="50" name="phone_number" placeholder=" 전화번호"><br />
+            <br />
+            <input type="password" size="50" name="pass" placeholder=" 새로운 비밀번호"><br />
+            <button class="submit" type="submit">비밀번호 찾기</button>
+            <br /><br />
+        </form>
+    </div>
+</body>
+
+</html>

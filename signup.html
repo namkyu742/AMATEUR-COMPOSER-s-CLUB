@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>회원 가입</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/login_and_sighup.css?ver=2.0aa" />
+</head>
+
+<body>
+    <a href="main_page.php"><img class="title_image" src="images/title_image2.png" alt="title_image" /></a>
+    <img class="title_line" src="images/title_line.png" alt="title_image" />
+    <form method="POST" action="signup.php" enctype="multipart/form-data">
+        <p>이메일</p>
+        <input type="text" name="email" placeholder=" Enter your e-mail" /><br />
+        <p>이름</p>
+        <input type="text" name="name" placeholder=" Enter your name" /><br />
+        <p>닉네임</p>
+        <input type="text" name="nickname" placeholder=" Enter your nickname" /><br />
+        <p>비밀번호</p>
+        <input type="password" name="pass" placeholder=" Enter your password." /><br />
+        <p>비밀번호 재확인</p>
+        <input type="password" name="passcon" placeholder=" Confirm your password." /><br />
+        <p>전화번호</p>
+        <input type="text" name="phone_number" placeholder=" Enter your phone number" /><br />
+        <p>사용자 이미지</p>
+        <input type="file" name="userimg" accept=".png, .jpg, .jpeg">
+        <button class="submit" type="submit">가입하기</button>
+    </form>
+</body>
+
+</html>

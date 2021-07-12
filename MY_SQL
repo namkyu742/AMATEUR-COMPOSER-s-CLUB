@@ -1,0 +1,50 @@
+drop database mydb;
+create database mydb default character set utf8 collate utf8_general_ci;
+use mydb;
+set names euckr;
+SET GLOBAL max_allowed_packet=16777215;
+
+-- drop table user;
+create table user (
+    id int(11) not null auto_increment,
+    email varchar(50) not null,
+    name varchar(50) not null,
+    nickname varchar(50) not null,
+    phone_number varchar (50) not null,
+    password varchar(40) not null,
+    image mediumblob,
+    primary key(id),
+    index(email)
+) ENGINE=InnoDB default character set utf8 collate utf8_general_ci;
+
+-- drop table post;
+create table post (
+    postid int(11) not null auto_increment,
+    userid int(11) not null,
+    time timestamp default current_timestamp,
+    music mediumblob,
+    title text NOT null,
+    memo text NOT null,
+    primary key(postid),
+    foreign key(userid) references user(id) on delete cascade on update cascade,
+    index(time)
+) ENGINE=InnoDB default character set utf8 collate utf8_general_ci;
+
+-- drop table reply;
+CREATE TABLE reply (
+    replyid INT(11) NOT NULL AUTO_INCREMENT,
+    postid INT(11) NOT NULL,
+    userid INT(11) NOT NULL,
+    time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    memo TEXT NOT NULL,
+    PRIMARY KEY (replyid),
+    FOREIGN KEY (postid) REFERENCES post(postid) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (userid) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    INDEX (postid),
+    INDEX (time)
+) ENGINE=InnoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+insert into user values (null, 'admin', '관리자', 'administrator', '01012345678', '2b5b9582e56f43a7e0d458cfd83412b6033562e5', '');
+    -- [주석] 관리자 ID : admin, PW : apmsetup
+
+select post.postid, user.nickname, post.title, post.memo, post.time FROM post INNER JOIN user ON post.userid = user.id;
